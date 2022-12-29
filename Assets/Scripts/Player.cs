@@ -8,11 +8,9 @@ public class Player : MonoBehaviour
 {
     public TMP_Text phaseDisplayText;
     private Touch theTouch;
-    private float timeTouchEnded;
-    private float displayTime = 0.5f;
 
     //Character movement
-    public float characterSpeed = 0.5f;
+    public float characterSpeed = 1f;
 
 
     // Start is called before the first frame update
@@ -27,25 +25,23 @@ public class Player : MonoBehaviour
         if(Input.touchCount > 0)
         {
             theTouch = Input.GetTouch(0);
-            //if (theTouch.phase == TouchPhase.Ended)
-            //{
-            //    phaseDisplayText.text = theTouch.phase.ToString();
-            //    timeTouchEnded = Time.time;
-            //}
-            //else if (Time.time - timeTouchEnded > displayTime)
-            //{
-            //    phaseDisplayText.text = theTouch.phase.ToString();
-            //    timeTouchEnded = Time.time;
-            //}
             if (theTouch.phase == TouchPhase.Moved)
             {
                 transform.position = new Vector2(transform.position.x + theTouch.deltaPosition.x * characterSpeed,
                     transform.position.y + theTouch.deltaPosition.y * characterSpeed);
             }
         }
-        //else if (Time.time - timeTouchEnded > displayTime)
-        //{
-        //    phaseDisplayText.text = "";
-        //}
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "offscreen")
+        {
+            characterSpeed = 0f;
+        }
+        else
+        {
+            characterSpeed = 1f;
+        }
     }
 }
