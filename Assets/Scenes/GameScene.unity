@@ -282,11 +282,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392961191}
-  - component: {fileID: 392961194}
   - component: {fileID: 392961192}
   - component: {fileID: 392961193}
-  - component: {fileID: 392961195}
-  - component: {fileID: 392961197}
   - component: {fileID: 392961198}
   - component: {fileID: 392961196}
   m_Layer: 0
@@ -378,35 +375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90be3012ffc5656488353ed3d1bb6317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &392961194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392961190}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae488e4d3cd838643ac65c7e766971fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterSpeed: 0.05
---- !u!114 &392961195
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392961190}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41c4849d44b4944099a4c0e3794c2ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mousePosition: {x: 0, y: 0, z: 0}
-  rb: {fileID: 0}
-  direction: {x: 0, y: 0}
-  moveSpeed: 100
 --- !u!50 &392961196
 Rigidbody2D:
   serializedVersion: 4
@@ -428,20 +396,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &392961197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392961190}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a426674f0dba324595f4dca53e59331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  target: {x: 0, y: 0, z: 0}
 --- !u!114 &392961198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2772,7 +2726,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -5.28
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3215,7 +3169,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5583,6 +5537,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5668,6 +5623,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   centerBackground: {fileID: 724338636}
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c88db6ad32b97c458314009779ae795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefab: {fileID: 5351123478419852541, guid: 251e7008dd4900842ad1c5e317eff654,
+    type: 3}
+  respawnTime: 1
 --- !u!1 &1644163545
 GameObject:
   m_ObjectHideFlags: 0
