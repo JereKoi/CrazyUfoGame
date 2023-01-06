@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 392961193}
   - component: {fileID: 392961198}
   - component: {fileID: 392961196}
+  - component: {fileID: 392961194}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -310,8 +311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0.8, y: 0.6}
+  m_AnchoredPosition: {x: -0.66, y: 0}
+  m_SizeDelta: {x: 0.47028416, y: 0.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &392961192
 SpriteRenderer:
@@ -370,11 +371,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 392961190}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90be3012ffc5656488353ed3d1bb6317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainCamera: {fileID: 963194227}
+--- !u!58 &392961194
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392961190}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.02033323}
+  serializedVersion: 2
+  m_Radius: 0.23152432
 --- !u!50 &392961196
 Rigidbody2D:
   serializedVersion: 4
