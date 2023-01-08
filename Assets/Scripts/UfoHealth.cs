@@ -9,6 +9,8 @@ public class UfoHealth : MonoBehaviour
     private int life;
     private bool dead;
 
+    public AdsManager ads;
+
     private void Start()
     {
         life = hearts.Length;
@@ -18,6 +20,8 @@ public class UfoHealth : MonoBehaviour
     {
         if (dead == true)
         {
+            ads.PlayAd();
+            Time.timeScale = 0;
             //Game over
         }
     }
@@ -32,6 +36,14 @@ public class UfoHealth : MonoBehaviour
             {
                 dead = true;
             }
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Asteroid")
+        {
+            TakeDamage(1);
         }
     }
 }

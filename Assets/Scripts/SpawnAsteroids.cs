@@ -13,6 +13,7 @@ public class SpawnAsteroids : MonoBehaviour
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(asteroidWave());
+        StartCoroutine(speedup());
     }
     private void spawnEnemy()
     {
@@ -26,5 +27,27 @@ public class SpawnAsteroids : MonoBehaviour
             yield return new WaitForSeconds(respawnTime);
             spawnEnemy();
         }
+    }
+
+    IEnumerator speedup()
+    {
+        while (true)
+        {
+            if (respawnTime >= 0.45f)
+            {
+                yield return new WaitForSeconds(25);
+                respawnTime -= 0.1f;
+            }
+            else if (respawnTime <= 0.45f)
+            {
+                respawnTime = 0.45f;
+            }
+        }
+
+        //while (true)
+        //{
+        //    yield return new WaitForSeconds(30);
+        //    respawnTime -= 0.1f;
+        //}
     }
 }

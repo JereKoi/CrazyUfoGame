@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - offscreen
+  - Asteroid
   layers:
   - Default
   - TransparentFX
