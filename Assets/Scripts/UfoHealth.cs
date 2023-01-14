@@ -25,7 +25,6 @@ public class UfoHealth : MonoBehaviour
     {
         if (dead == true)
         {
-            //ads.PlayAd();
             Time.timeScale = 0;
             GameOver.SetActive(true);
             ScoreText.enabled = false;
@@ -43,6 +42,10 @@ public class UfoHealth : MonoBehaviour
             {
                 dead = true;
             }
+        }
+        if (life <= 0)
+        {
+            ads.PlayAd();
         }
     }
 

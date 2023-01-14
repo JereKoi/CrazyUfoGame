@@ -33,14 +33,14 @@ public class SpawnAsteroids : MonoBehaviour
     {
         while (true)
         {
-            if (respawnTime >= 0.45f)
+            if (respawnTime >= 0.4f)
             {
                 yield return new WaitForSeconds(25);
                 respawnTime -= 0.1f;
             }
-            else if (respawnTime <= 0.45f)
+            else if (respawnTime <= 0.4f)
             {
-                respawnTime = 0.45f;
+                respawnTime = 0.4f;
             }
         }
     }
