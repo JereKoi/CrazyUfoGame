@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class UfoHealth : MonoBehaviour
 {
     public GameObject[] hearts;
+    public GameObject GameOver;
+    public TMPro.TMP_Text ScoreText;
     private int life;
     private bool dead;
 
@@ -13,6 +16,8 @@ public class UfoHealth : MonoBehaviour
 
     private void Start()
     {
+        dead = false;
+        Time.timeScale = 1;
         life = hearts.Length;
     }
 
@@ -20,8 +25,10 @@ public class UfoHealth : MonoBehaviour
     {
         if (dead == true)
         {
-            ads.PlayAd();
+            //ads.PlayAd();
             Time.timeScale = 0;
+            GameOver.SetActive(true);
+            ScoreText.enabled = false;
             //Game over
         }
     }

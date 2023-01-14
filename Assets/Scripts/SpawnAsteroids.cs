@@ -43,11 +43,5 @@ public class SpawnAsteroids : MonoBehaviour
                 respawnTime = 0.45f;
             }
         }
-
-        //while (true)
-        //{
-        //    yield return new WaitForSeconds(30);
-        //    respawnTime -= 0.1f;
-        //}
     }
 }
